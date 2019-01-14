@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)  
+PROJECT(Demo)  
+SET(SRC_LIST main.cpp)  
+find_package(OpenCV REQUIRED)  
+include_directories(${OpenCV_INCLUDE_DIRS})  
+ADD_EXECUTABLE(demo ${SRC_LIST})  
+target_link_libraries(demo ${OpenCV_LIBS}) 
